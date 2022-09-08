@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="css/main.css">
+    <title>javascript FullStack Chat</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-warning">
+        <a class="navbar-brand mx-auto" href="/">JavaScript FullStack Chat</a>
+    </nav>
+
+    <div class="card col-md-5 mt-5 mx-auto" id="nickWrap">
+            <div class="card-header">
+                <h3>Ingrese su Nombre de Usuario:</h3>
+            </div>
+            <p id="nickError"></p>
+            <div class="card-body">
+                <form id="nickForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nickname" placeholder="Ingrese su nombre de usuario">
+                    </div>
+                    <button type="submit" class="btn btn-warning mt-2"><em class="fas fa-location-arrow"></em> Ingresar</button>
+                </form>
+            </div>
+    </div>
+
+    <div class="container" id="contentWrap">
+        <div class="row">
+            <div class="col-md-6 offset-md-1 mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Chat</h3>
+                    </div>
+                    <div class="card-body" id="chat">
+                    </div>
+                    <form id="message-form" class="card-footer">
+                        <div class="input-group">
+                            <input type="text" id="message" class="form-control type_msg"
+                                placeholder="Escribe un mensage...">
+                            <div class="input-group-append m-auto ms-2">
+                                <span class="input-group-text send_btn text-center bg-warning"><em
+                                        class="fas fa-location-arrow"> Enviar</em></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card col-md-3 mt-4">
+                <div class="card-header">
+                    <h3>Usuarios</h3>
+                </div>
+                <div class="card-body">
+                    <div id="usernames">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="/socket.io/socket.io.js" charset="utf-8"></script>
+<script src="/js/main.js" charset="utf-8"></script>
+
+</html>
